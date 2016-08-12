@@ -9,6 +9,10 @@ app.set('view engine', 'pug')
 app.use(express.static('public'))
 app.use('/', trumplines.router)
 
+if (app.get('env') === 'development') {
+	app.locals.pretty = true
+}
+
 app.listen(3000, () => {
 	console.log('Trump on line', app.get('port'))
 })
