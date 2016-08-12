@@ -39,6 +39,9 @@ jspm_packages
 # src folder
 src/
 
+# Remove configuration
+etc/development.json
+
 # Typings
 typings/
 
