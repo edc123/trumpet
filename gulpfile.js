@@ -1,6 +1,6 @@
-// Watch and Compile .scss from /src/scss
-
 'use strict'
+
+//Comment out sourcemaps for production
 
 const autoprefixer = require('gulp-autoprefixer')
 	, beep = require('beeper')
@@ -24,10 +24,7 @@ const paths = {
 	]
 }
 
-const onError = (err) => {
-	console.log(err)
-}
-
+//Tasks
 gulp.task('serve', () => {
 	nodemon({script: 'index.js'})
 })
@@ -36,15 +33,13 @@ gulp.task('sass', () => {
 	beep()
 	gulp
 		.src(paths.sass[0])
-		.pipe(plumber({
-			errorHandler: onError
-		}))
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
-		.pipe(sourcemaps.write('./public/css/map'))
 		.pipe(autoprefixer())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('public/css'))
 		.pipe(livereload())
 })
@@ -53,9 +48,7 @@ gulp.task('view', () => {
 	beep()
 	gulp
 		.src(paths.views)
-		.pipe(plumber({
-			errorHandler: onError
-		}))
+		.pipe(plumber())
 		.pipe(livereload())
 })
 
@@ -65,4 +58,5 @@ gulp.task('watch', () => {
 	gulp.watch(paths.views, ['view'])
 })
 
+//Go!!!
 gulp.task('default', ['view', 'sass', 'serve', 'watch'])
