@@ -1,5 +1,5 @@
 {
-  "name": "trumpet",
+  "name": "trumplines",
   "version": "0.0.1",
   "description": "Sentiment analysis on Trump using New York Times API, with viz. ",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edc123/trumpet.git"
+    "url": "git+https://github.com/edc123/trumplines.git"
   },
   "keywords": [
     "trump"
@@ -16,9 +16,9 @@
   "author": "Edward Cheng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edc123/trumpet/issues"
+    "url": "https://github.com/edc123/trumplines/issues"
   },
-  "homepage": "https://github.com/edc123/trumpet#readme",
+  "homepage": "https://github.com/edc123/trumplines#readme",
   "dependencies": {
     "sentiment": "^2.0.0"
   }
