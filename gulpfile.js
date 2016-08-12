@@ -2,13 +2,14 @@
 
 'use strict'
 
-const beep = require('beeper')
+const autoprefixer = require('gulp-autoprefixer')
+	, beep = require('beeper')
 	, gulp = require('gulp')
 	, livereload = require('gulp-livereload')
 	, nodemon = require('gulp-nodemon')
-	, notify = require('gulp-notify')
 	, plumber = require('gulp-plumber')
 	, sass = require('gulp-sass')
+	, sourcemaps = require('gulp-sourcemaps')
 
 // Paths
 const paths = {
@@ -38,16 +39,13 @@ gulp.task('sass', () => {
 		.pipe(plumber({
 			errorHandler: onError
 		}))
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
+		.pipe(sourcemaps.write('./public/css/map'))
+		.pipe(autoprefixer())
 		.pipe(gulp.dest('public/css'))
-		// .pipe(notify({
-		// 	title: 'SASS'
-		// 	, message: 'Trumplines'
-		// 	, onLast: true
-		// 	, icon: false
-		// }))
 		.pipe(livereload())
 })
 
@@ -58,12 +56,6 @@ gulp.task('view', () => {
 		.pipe(plumber({
 			errorHandler: onError
 		}))
-		// .pipe(notify({
-		// 	title: 'Views'
-		// 	, message: 'Trumplines'
-		// 	, onLast: true
-		// 	, icon: false
-		// }))
 		.pipe(livereload())
 })
 
