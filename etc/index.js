@@ -3,7 +3,7 @@
 if(process.env.NODE_ENV === 'production') {
 	module.exports = {
 		host: process.env.host || '',
-		apiKey: process.env.apiKey
+		articleSearchKey: process.env.articleSearchKey
 	}
 
 } else {
