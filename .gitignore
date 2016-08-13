@@ -44,6 +44,7 @@ etc/development.json
 
 # Typings
 typings/
+typings.json
 
 # Misc vscode
 /.eslintrc.js

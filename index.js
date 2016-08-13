@@ -1,8 +1,8 @@
 'use strict'
 
-const express = require('express')
-	, app     = express()
-	, trumplines = require('./app')
+const express    = require('express')
+const app        = express()
+const trumplines = require('./app')
 
 app.set('port', process.env.PORT || 3000)
 app.set('view engine', 'pug')
@@ -13,6 +13,6 @@ if (app.get('env') === 'development') {
 	app.locals.pretty = true
 }
 
-app.listen(3000, () => {
+app.listen(app.get('port'), () => {
 	console.log('Trump on line', app.get('port'))
 })
