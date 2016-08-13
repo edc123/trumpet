@@ -25,7 +25,7 @@ const paths = {
 	]
 }
 
-//Tasks
+// Tasks
 gulp.task('serve', () => {
 	nodemon({script: 'index.js'})
 })
@@ -59,5 +59,5 @@ gulp.task('watch', () => {
 	gulp.watch(paths.views, ['view'])
 })
 
-//Go!!!
+// Go!!
 gulp.task('default', ['view', 'sass', 'serve', 'watch'])
