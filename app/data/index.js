@@ -9,8 +9,9 @@ function getYear(year) {
 	let startDate = year + '0101'
 	let endDate   = year + '1231'
 
-	nyt.article.search({ 
-		'fq': 'persons: \"Trump, Donald J\"',
+	nyt.article.search({
+		'q': 'Trump',
+		'fq': 'headline: "Trump" AND persons: \"Trump, Donald J\"',
 		'fl': 'headline,pub_date',
 		begin_date: startDate,
 		end_date: endDate,
@@ -18,4 +19,7 @@ function getYear(year) {
 	}, util.log)
 }
 
+//for every year...
 getYear(2016)
+
+//clean up json files

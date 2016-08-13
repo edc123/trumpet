@@ -1,24 +1,5 @@
-{"response":{"meta":{"hits":3011,"time":46,"offset":0},"docs":[{"headline":{"main"
-:"Privilege, Pathology and Power","content_kicker":"Op-Ed Columnist","kicker":"Op-
-Ed Columnist","print_headline":"Privilege, Pathology And Power"},"pub_date":"2016-
-01-01T00:00:00Z"},{"headline":{"main":"What We&#8217;re Reading","kicker":"News"},
-"pub_date":"2016-01-01T16:23:35Z"},{"headline":{"main":"Qaeda Affiliate Uses Video
- of Donald Trump for Recruiting","print_headline":"Shabab Use Video of Trump for R
-ecruiting"},"pub_date":"2016-01-02T00:00:00Z"},{"headline":{"main":"Donald Trump S
-hrugs Off Appearance in Terrorist Video","kicker":"First Draft","print_headline":"
-Trump Shrugs Off Spot in Shabab Video"},"pub_date":"2016-01-02T22:54:56Z"},{"headl
-ine":{"main":"The Primary That Disqualified the Qualified","content_kicker":"Featu
-re","kicker":"Feature","print_headline":"Disqualified"},"pub_date":"2016-01-03T00:
-00:00Z"},{"headline":{"main":"Confessions of a Columnist","content_kicker":"Op-Ed 
-Columnist","kicker":"Op-Ed Columnist","print_headline":"Confessions of a Columnist
-"},"pub_date":"2016-01-03T00:00:00Z"},{"headline":{"main":"For Donald Trump, Lesso
-ns From a Brother\u2019s Suffering","print_headline":"For Trump, Lessons in a Brot
-her&#8217;s Pain "},"pub_date":"2016-01-03T00:00:00Z"},{"headline":{"main":"Whatev
-er Happened to Latino Political Power?","content_kicker":"Campaign Stops","kicker"
-:"Campaign Stops","print_headline":"Whatever Happened to Latino Power?"},"pub_date
-":"2016-01-03T00:00:00Z"},{"headline":{"main":"Opini\u00f3n: \u00bfQu\u00e9 pas\u0
-0f3 con el poder pol\u00edtico de los latinos en Estados Unidos?","content_kicker"
-:"Am\u00e9rica "},"pub_date":"2016-01-03T00:00:00Z"},{"headline":{"main":"G.O.P. C
-andidates Warn of Obama&#8217;s Actions on Guns","kicker":"First Draft"},"pub_date
-":"2016-01-03T13:09:11Z"}]},"status":"OK","copyright":"Copyright (c) 2013 The New 
-York Times Company.  All Rights Reserved."}   
+{
+	"headline": {
+		"main": "Shabab Use Video of Trump for Recruiting"
+	}
+}
