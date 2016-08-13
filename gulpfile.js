@@ -1,15 +1,16 @@
 'use strict'
 
+//Ed's Gulpfile
 //Comment out sourcemaps for production
 
 const autoprefixer = require('gulp-autoprefixer')
-	, beep = require('beeper')
-	, gulp = require('gulp')
-	, livereload = require('gulp-livereload')
-	, nodemon = require('gulp-nodemon')
-	, plumber = require('gulp-plumber')
-	, sass = require('gulp-sass')
-	, sourcemaps = require('gulp-sourcemaps')
+const beep         = require('beeper')
+const gulp         = require('gulp')
+const livereload   = require('gulp-livereload')
+const nodemon      = require('gulp-nodemon')
+const plumber      = require('gulp-plumber')
+const sass         = require('gulp-sass')
+const sourcemaps   = require('gulp-sourcemaps')
 
 // Paths
 const paths = {

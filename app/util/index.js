@@ -1,11 +1,14 @@
 'use strict'
 
-const prettyjson = require('prettyjson')
+function log(arg) {
+	console.log(arg)
+}
 
-function prettyPrint(arg) {
-	prettyjson.render(arg)
+function writeToFile(arg) {
+	console.log(arg)
 }
 
 module.exports = {
-	prettyPrint
+	log,
+	writeToFile
 }
