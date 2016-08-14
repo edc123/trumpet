@@ -10,8 +10,11 @@ function writeToFile(arg) {
 	console.log(arg)
 }
 
-// clean up json data
-// apply sentiment 
+// FILTER TRUMPLINES
+
+//ARBITRARY TRUMPLINE UPDATE
+
+// SENTIMENT ANALYSIS
 
 module.exports = {
 	log,
