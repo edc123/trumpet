@@ -18,8 +18,9 @@ function setup() {
 }
 
 function draw() {
-	textSize(15);
-	textFont("Georgia");
+	textSize(18);
+	text(data.headline.pub_date, 35, 120);
 	textStyle(BOLD);
-	text(data.headline.main, 35, 120);
+	textSize(25);
+	text(data.headline.main, 35, 150);
  }

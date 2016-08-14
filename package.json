@@ -22,6 +22,7 @@
   "dependencies": {
     "async": "^2.0.1",
     "express": "^4.14.0",
+    "moment": "^2.14.1",
     "nyt": "^0.1.0",
     "pug": "^2.0.0-beta5",
     "sentiment": "^2.0.0"
@@ -34,6 +35,6 @@
     "gulp-nodemon": "^2.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
