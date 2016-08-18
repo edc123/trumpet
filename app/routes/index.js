@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
 // API GOES HERE
 
 router.get('/api/test', (req, res, next) => {
-	res.send(test)
+	res.json(test)
 })
 
 router.get('/api/', (req, res, next) => {
