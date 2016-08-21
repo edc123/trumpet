@@ -1,0 +1,142 @@
+{
+    "response": {
+        "meta": {
+            "hits": 0,   response.meta.hits
+            "time": 55,
+            // "offset": 0  response.meta.offset <--- important to tell how far we've gone. offset - hits = remainder..... ceil(remainder / 10) = #pages left
+        },
+
+        // "docs": []  response.docs append items 
+    },
+
+
+    // "status": "OK",             status
+    "copyright": "Copyright (c) 2013 The New York Times Company.  All Rights Reserved."
+}
+
+
+{
+    "meta": {
+        "hits": 0,
+        "time": 55,
+        "offset": 0
+    },
+
+    "docs": [
+             {headline: {}, pub_date, url}, doc.headline.main, doc.pub_date, docs[0].url
+             {headline: {}, pub_date, url}, docs[1].
+             {headline: {}, pub_date, url}  docs[2]
+            ]
+}
+
+
+
+
+
+
+Promise.all([
+    asyncFunc1(),
+    asyncFunc2(),
+])
+.then(([result1, result2]) => {
+    ···
+})
+.catch(err => {
+    // Receives first rejection among the Promises
+    ···
+});
+
+
+asyncFunction1(a, b)
+  .then(result1 => {
+      console.log(result1);
+      return asyncFunction2(x, y);
+  })
+  .then(result2 => {
+      console.log(result2);
+  });
+
+asyncFunc1()
+.then(function (value1) {
+    return asyncFunc2();
+})
+.then(function (value2) {
+    ···
+})
+
+
+// LOOP (stop at 20160701 (91 iter)) DO nytHalfYear, nest loop over ceil(response.meta.hits / 10)
+// times to do pages......every two iter, UTIL.writeFile to "thatYear".json, if anything returns...
+//
+// UTIL FUNC - FILTER TRUMPLINES - on "thatYear.json", filter out to just the *main* headline and pub_date ... highland streaming map reduce magicks here
+//
+// UTIL FUNC - ARBITRARY TRUMPLINE UPDATE (date 1, date 2) - do start date as 20160701 / 20160702 - then
+// end date 20160814 (92nd final iter).
+//
+// UTIL FUNC - SENTIMENT ANALYSIS - sentiment analysis on everything producing new file in final folder,
+// COUNTER to add count of positive and negative per year??
+//
+// every user visit...
+//
+// do new arbitrary update, if new, filter from memory, sentiment and push to 2016.json
+// deal with the consequences on client side js.........progress bar while the update happens iff?
+
+
+
+[ { headline: { main: 'Trump Planning to Demolish World\'s Fair Casino in Atlantic City' },                                                                                                                    
+    pub_date: '1999-07-10T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/07/10/nyregion/trump-planning-to-demolish-world-s-fair-casino-in-atlantic-city.html' },                                                                              
+  { headline: { main: 'Political Notes; For Trump, a Race So Short and Sweet' },                                                                                                                               
+    pub_date: '1999-07-17T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/07/17/nyregion/political-notes-for-trump-a-race-so-short-and-sweet.html' },                                                                                          
+  { headline: { main: 'Giuliani Declines to Join Fight Over Trump Tower Near U.N.' },                                                                                                                          
+    pub_date: '1999-08-19T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/08/19/nyregion/giuliani-declines-to-join-fight-over-trump-tower-near-un.html' },                                                                                     
+  { headline: { main: 'Liberties; Trump L\'oeil Tease' },                                                                                                                                                      
+    pub_date: '1999-09-19T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/09/19/opinion/liberties-trump-l-oeil-tease.html' },                                                                                                                  
+  { headline: { main: 'Metro Business; Trump Is Allowed To Demolish Casino' },                                                                                                                                 
+    pub_date: '1999-09-24T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/09/24/nyregion/metro-business-trump-is-allowed-to-demolish-casino.html' },                                                                                           
+  { headline:                                                                                                                                                                                                  
+     { main: 'A Victory for Trump And a Residential Tower',                                                                                                                                                    
+       kicker: 'METRO NEWS BRIEFS: NEW YORK' },                                                                                                                                                                
+    pub_date: '1999-09-29T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/09/29/nyregion/metro-news-briefs-new-york-a-victory-for-trump-and-a-residential-tower.html' },                                                                       
+  { headline: { main: 'Citing Public Support, Trump Forms Exploratory Committee on Presidency' },                                                                                                              
+    pub_date: '1999-10-08T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/10/08/us/citing-public-support-trump-forms-exploratory-committee-on-presidency.html' },                                                                              
+  { headline: { main: 'Giving Trump A Swift Kick Upstairs', kicker: 'NYC' },                                                                                                                                   
+    pub_date: '1999-10-12T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/10/12/nyregion/nyc-giving-trump-a-swift-kick-upstairs.html' },                                                                                                       
+  { headline: { main: 'The Big City; Towering Case Of Trump Writ Large' },                                                                                                                                     
+    pub_date: '1999-10-18T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/10/18/nyregion/the-big-city-towering-case-of-trump-writ-large.html' },                                                                                               
+  { headline: { main: 'Neighborhood Coalition Sues Over Trump Building Project' },                                                                                                                             
+    pub_date: '1999-10-26T00:00:00Z',                                                                                                                                                                          
+    web_url: 'http://www.nytimes.com/1999/10/26/nyregion/neighborhood-coalition-sues-over-trump-building-project.html' } ]
+
+
+
+// then if pagesRemaining > 1...
+// Page n: Loop to create array of nytSearch promises
+// for(let i = 1; i < pagesRemaining; i++) {
+// 	promises.push
+// }
+
+// Promise All: Define saving action in then callback
+
+// define the start date e.g. 19760101
+
+// do initial search... page 0: to get first 10 headlines and meta. store the meta. hold the headlines to a var
+
+// if there is more to do, calc how many more and generate promises for all pages 
+
+// GENERATE AN ARRAY OF PROMISES, one for each page
+
+// promise.all([ page(1), page(2), page(3), ... ]) ---> .then ((obj with all formatted headlines) => then append page 0's headlines and save)
+
+// i.e. promise(page) 
+	// do nyt api search for (page) specified,
+	// do some checks for validation
+	// return headlines array
