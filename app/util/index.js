@@ -13,12 +13,11 @@ function nytSearch(date, pageNumber) {
 			'fq':       'headline:\"Trump\" AND persons:\"Trump, Donald J\"',
 			'fl':       'headline,pub_date,web_url',
 			begin_date: date,
-			end_date:   moment(date).add(12, 'months').format('YYYYMMDD'),
+			end_date:   moment(date).add(4, 'months').format('YYYYMMDD'),
 			sort:       'oldest',
 			page:       pageNumber
 		}, (results) => {
-			let metaJSON = JSON.parse(results).response
-			if (metaJSON.status === 'ERROR') console.log('Error with nyt api!')
+			if (JSON.parse(results).response.status === 'ERROR') console.log('Error with nyt api!')
 			else resolve(results)
 		})
 	})
