@@ -29,8 +29,16 @@
             ]
 }
 
+sentiment analysis returns...
 
+{ score: 3,                                                                                                                                                                                      
+  comparative: 1,                                                                                                                                                                                
+  tokens: [ 'headline', 'happy', 'headline' ],                                                                                                                                                   
+  words: [ 'happy' ],                                                                                                                                                                            
+  positive: [ 'happy' ],                                                                                                                                                                         
+  negative: [] }    
 
+need array of these...
 
 
 

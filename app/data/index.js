@@ -11,7 +11,7 @@ let headlines   = []
 
 co(function* () {
 	// Article Search for Whole Year
-	console.log('Working on ' + year)
+	console.log('Working on ' + year + '...')
 	for(let i = 1; i <= 2; i++) dates.push(moment(initialDate).add(4*i, 'months').format('YYYYMMDD'))
 	let searches = dates.map(date => { return co(search(date)) })
 	yield Promise.all(searches)

@@ -63,11 +63,11 @@ function processHeadlines(data) {
 	})
 }
 
+// This should take the entire headlines array and for each element add the score key with sentiment score
 function sentimenter(data) {
 	return new Promise((resolve, reject) => {
 		let sentimentHeadlines = data.foreach((headline) => {
-			console.log(headline.headline)
-			sentiment(headline.headline)
+			sentiment(headline.headline).score
 		})
 		resolve(sentimentHeadlines)
 	})
