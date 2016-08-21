@@ -5,7 +5,6 @@ const fs        = require('fs')
 const moment    = require('moment')
 const NYT       = require('nyt')
 const nyt       = new NYT(config.articleSearchKey)
-const sentiment = require('sentiment')
 
 function nytSearch(date, pageNumber) {
 	return new Promise((resolve, reject) => {
@@ -46,7 +45,8 @@ function readMeta(data, year) {
 			hits: rawJSON.hits,
 			offset: rawJSON.offset
 		}
-		resolve(meta)
+		let metaArr = [meta]
+		resolve(metaArr)
 	})
 }
 
@@ -62,25 +62,7 @@ function processHeadlines(data) {
 	})
 }
 
-// need a function to seperate meta from docs array
-// then call write to JSON on each...
-
-	//write meta to totals.json
-	//write docs to year.json e.g. '1974.json'
-
-		// let meta = rawJSON.meta
-		// let docs = rawJSON.docs
-		// console.log(meta)
-		// console.log(docs)
-
-		// return 
-
-		// while response.meta.hits > 10, recur nytHalfYear but increment pageNumber++ ... so here we check if we need to continue in this date space
-		// then when done -- resolve(results) // need to paginate IF available ie do another nythalfyear...maybe a while loop??, else resolve the results object
-
 //ARBITRARY TRUMPLINE UPDATE
-
-// SENTIMENT ANALYSIS
 
 module.exports = {
 	nytSearch,
