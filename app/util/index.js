@@ -5,6 +5,7 @@ const fs        = require('fs')
 const moment    = require('moment')
 const NYT       = require('nyt')
 const nyt       = new NYT(config.articleSearchKey)
+const sentiment = require('sentiment')
 
 function nytSearch(date, pageNumber) {
 	return new Promise((resolve, reject) => {
@@ -62,11 +63,20 @@ function processHeadlines(data) {
 	})
 }
 
-//ARBITRARY TRUMPLINE UPDATE
+function sentimenter(data) {
+	return new Promise((resolve, reject) => {
+		let sentimentHeadlines = data.foreach((headline) => {
+			console.log(headline.headline)
+			sentiment(headline.headline)
+		})
+		resolve(sentimentHeadlines)
+	})
+}
 
 module.exports = {
 	nytSearch,
 	writeToTxt,
 	readMeta,
-	processHeadlines
+	processHeadlines,
+	sentimenter
 }
