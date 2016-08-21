@@ -1,10 +1,10 @@
 'use strict'
 
-const config      = require('../../etc')
+const config    = require('../../etc')
 const fs        = require('fs')
-const moment       = require('moment')
-const NYT          = require('nyt')
-const nyt          = new NYT(config.articleSearchKey)
+const moment    = require('moment')
+const NYT       = require('nyt')
+const nyt       = new NYT(config.articleSearchKey)
 const sentiment = require('sentiment')
 
 function nytSearch(date, pageNumber) {
@@ -17,7 +17,10 @@ function nytSearch(date, pageNumber) {
 			sort:       'oldest',
 			page:       pageNumber
 		}, (results) => {
-			if (JSON.parse(results).response.status === 'ERROR') console.log('Error with nyt api!')
+			if (JSON.parse(results).response.status === 'ERROR') {
+				console.log('Error with nyt api!')
+				reject
+			}
 			else resolve(results)
 		})
 	})
@@ -26,10 +29,10 @@ function nytSearch(date, pageNumber) {
 function writeToTxt(arg, filename) {
 	return new Promise((resolve, reject) => {
 		let path = './app/data/' + filename + '.txt'
-		console.log('no errors so writing now to ', path)
-		fs.appendFile(path, JSON.stringify(arg), 'utf8', (err) => {
+		fs.writeFile(path, JSON.stringify(arg), 'utf8', (err) => {
 			if(err) throw err
-			console.log('Done! ', path)
+			console.log('Done writing all the Trump to ' + path + '!')
+			reject
 		})
 		resolve(1)
 	})
