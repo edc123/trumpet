@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"year":"1988","hits":23,"offset":0}
+=======
+[{"year":"1988","hits":23,"offset":0}]
+>>>>>>> 629285ea3d6dd85cd523bfdc7652e976ef6d08a9
