@@ -7,9 +7,10 @@
 // https://developer.nytimes.com/
 
 var data;
+var yearShowing = 'total';
 
 function preload() {
-	data = loadJSON('/api/test');
+	data = loadJSON('/api/' + yearShowing);
 }
 
 function setup() {

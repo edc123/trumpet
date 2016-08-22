@@ -1,1 +1,80 @@
-[{"headline":"New Tack for Trump In Helmsley Battle","pub_date":"19960131","web_url":"http://www.nytimes.com/1996/01/31/nyregion/new-tack-for-trump-in-helmsley-battle.html","score":-1},{"headline":"Trump to Issue Mortgage Notes","pub_date":"19960203","web_url":"http://www.nytimes.com/1996/02/03/business/trump-to-issue-mortgage-notes.html","score":0},{"headline":"Trump Cancels Plan For Davids Island","pub_date":"19960309","web_url":"http://www.nytimes.com/1996/03/09/nyregion/trump-cancels-plan-for-davids-island.html","score":-1},{"headline":"NEW JERSEY GRANTS MERGER OF TWO TRUMP CASINOS","pub_date":"19960410","web_url":"http://www.nytimes.com/1996/04/10/business/company-news-new-jersey-grants-merger-of-two-trump-casinos.html","score":1},{"headline":"The 1980's: April 8, 1984;Trump, Expanding","pub_date":"19960414","web_url":"http://www.nytimes.com/1996/04/14/magazine/the-1980-s-april-8-1984-trump-expanding.html","score":0},{"headline":"Trump in Deal to Buy 55 Wall Street","pub_date":"19960928","web_url":"http://www.nytimes.com/1996/09/28/nyregion/trump-in-deal-to-buy-55-wall-street.html","score":0},{"headline":"TRUMP MAY TURN TRUMP'S CASTLE INTO HARD ROCK CASINO","pub_date":"19961004","web_url":"http://www.nytimes.com/1996/10/04/business/trump-may-turn-trump-s-castle-into-hard-rock-casino.html","score":-1},{"headline":"Trump Sells Hyatt Share To Pritzkers","pub_date":"19961008","web_url":"http://www.nytimes.com/1996/10/08/business/trump-sells-hyatt-share-to-pritzkers.html","score":1},{"headline":"TRUMP ENDS DISCUSSIONS WITH RANK ON CASTLE CASINO","pub_date":"19961203","web_url":"http://www.nytimes.com/1996/12/03/business/trump-ends-discussions-with-rank-on-castle-casino.html","score":0},{"headline":"Trump May Merge 2 Casinos","pub_date":"19961220","web_url":"http://www.nytimes.com/1996/12/20/nyregion/trump-may-merge-2-casinos.html","score":0},{"headline":"Trump Nears a Missing Link: A Sewage Hookup","pub_date":"19961222","web_url":"http://www.nytimes.com/1996/12/22/nyregion/trump-nears-a-missing-link-a-sewage-hookup.html","score":-2},{"headline":"A Trump Garage Sale","pub_date":"19960711","web_url":"http://www.nytimes.com/1996/07/11/garden/a-trump-garage-sale.html","score":0},{"headline":"Trump Shows a Different Profile;His New Business Style Puts the Deal Ahead of Ego","pub_date":"19960726","web_url":"http://www.nytimes.com/1996/07/26/business/trump-shows-different-profile-his-new-business-style-puts-deal-ahead-ego.html","score":0}]
+[
+    {
+        "headline": "New Tack for Trump In Helmsley Battle",
+        "pub_date": "19960131",
+        "web_url": "http://www.nytimes.com/1996/01/31/nyregion/new-tack-for-trump-in-helmsley-battle.html",
+        "score": -1
+    },
+    {
+        "headline": "Trump to Issue Mortgage Notes",
+        "pub_date": "19960203",
+        "web_url": "http://www.nytimes.com/1996/02/03/business/trump-to-issue-mortgage-notes.html",
+        "score": 0
+    },
+    {
+        "headline": "Trump Cancels Plan For Davids Island",
+        "pub_date": "19960309",
+        "web_url": "http://www.nytimes.com/1996/03/09/nyregion/trump-cancels-plan-for-davids-island.html",
+        "score": -1
+    },
+    {
+        "headline": "NEW JERSEY GRANTS MERGER OF TWO TRUMP CASINOS",
+        "pub_date": "19960410",
+        "web_url": "http://www.nytimes.com/1996/04/10/business/company-news-new-jersey-grants-merger-of-two-trump-casinos.html",
+        "score": 1
+    },
+    {
+        "headline": "The 1980's: April 8, 1984;Trump, Expanding",
+        "pub_date": "19960414",
+        "web_url": "http://www.nytimes.com/1996/04/14/magazine/the-1980-s-april-8-1984-trump-expanding.html",
+        "score": 0
+    },
+    {
+        "headline": "Trump in Deal to Buy 55 Wall Street",
+        "pub_date": "19960928",
+        "web_url": "http://www.nytimes.com/1996/09/28/nyregion/trump-in-deal-to-buy-55-wall-street.html",
+        "score": 0
+    },
+    {
+        "headline": "TRUMP MAY TURN TRUMP'S CASTLE INTO HARD ROCK CASINO",
+        "pub_date": "19961004",
+        "web_url": "http://www.nytimes.com/1996/10/04/business/trump-may-turn-trump-s-castle-into-hard-rock-casino.html",
+        "score": -1
+    },
+    {
+        "headline": "Trump Sells Hyatt Share To Pritzkers",
+        "pub_date": "19961008",
+        "web_url": "http://www.nytimes.com/1996/10/08/business/trump-sells-hyatt-share-to-pritzkers.html",
+        "score": 1
+    },
+    {
+        "headline": "TRUMP ENDS DISCUSSIONS WITH RANK ON CASTLE CASINO",
+        "pub_date": "19961203",
+        "web_url": "http://www.nytimes.com/1996/12/03/business/trump-ends-discussions-with-rank-on-castle-casino.html",
+        "score": 0
+    },
+    {
+        "headline": "Trump May Merge 2 Casinos",
+        "pub_date": "19961220",
+        "web_url": "http://www.nytimes.com/1996/12/20/nyregion/trump-may-merge-2-casinos.html",
+        "score": 0
+    },
+    {
+        "headline": "Trump Nears a Missing Link: A Sewage Hookup",
+        "pub_date": "19961222",
+        "web_url": "http://www.nytimes.com/1996/12/22/nyregion/trump-nears-a-missing-link-a-sewage-hookup.html",
+        "score": -2
+    },
+    {
+        "headline": "A Trump Garage Sale",
+        "pub_date": "19960711",
+        "web_url": "http://www.nytimes.com/1996/07/11/garden/a-trump-garage-sale.html",
+        "score": 0
+    },
+    {
+        "headline": "Trump Shows a Different Profile;His New Business Style Puts the Deal Ahead of Ego",
+        "pub_date": "19960726",
+        "web_url": "http://www.nytimes.com/1996/07/26/business/trump-shows-different-profile-his-new-business-style-puts-deal-ahead-ego.html",
+        "score": 0
+    }
+]

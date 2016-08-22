@@ -2,8 +2,8 @@
   "name": "trumplines",
   "version": "0.0.1",
   "description": "Sentiment analysis on Trump using New York Times API, with viz. ",
-  "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

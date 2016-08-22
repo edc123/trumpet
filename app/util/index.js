@@ -31,7 +31,6 @@ function writeToTxt(arg, filename) {
 		let path = './app/data/' + filename + '.txt'
 		fs.writeFile(path, JSON.stringify(arg), 'utf8', (err) => {
 			if(err) throw err
-			console.log('Done writing all the Trump to ' + path + '!')
 			reject
 		})
 		resolve(1)
