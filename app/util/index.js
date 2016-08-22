@@ -40,12 +40,23 @@ function writeToTxt(arg, filename) {
 function readMeta(data, year) {
 	return new Promise((resolve, reject) => {
 		let rawJSON = JSON.parse(data).response.meta
-		let meta = {
+		let meta = []
+		meta[0] = {
 			year,
 			hits: rawJSON.hits,
 			offset: rawJSON.offset
 		}
 		resolve(meta)
+	})
+}
+
+function processMeta(data) {
+	return new Promise((resolve, reject) => {
+		let processed = data.reduce((sumPeriod, metaPeriod) => ({
+			year: metaPeriod.year,
+			hits: sumPeriod.hits + metaPeriod.hits
+		}))
+		resolve(processed)
 	})
 }
 
@@ -78,6 +89,7 @@ module.exports = {
 	nytSearch,
 	writeToTxt,
 	readMeta,
+	processMeta,
 	processHeadlines,
 	sentimenter
 }
