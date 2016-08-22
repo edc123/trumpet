@@ -12,15 +12,16 @@ let headlines   = []
 co(function* () {
 	// Article Search for Whole Year
 	console.log('Working on ' + year + '...')
-	for(let i = 1; i <= 2; i++) dates.push(moment(initialDate).add(4*i, 'months').format('YYYYMMDD'))
+	for(let i = 1; i <= 2; i++)
+		dates.push(moment(initialDate).add(4*i, 'months').format('YYYYMMDD'))
 	let searches = dates.map(date => { return co(search(date)) })
 	yield Promise.all(searches)
-	yield util.writeToTxt(headlines, year)
+	// yield util.writeToTxt(headlines, year)
 	// Sentiment Analysis for Year's Headlines
 	let sentimentedHeadlines = yield util.sentimenter(headlines)
 	console.log(sentimentedHeadlines)
 	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
-})
+}).catch((err) => console.error(err))
 
 function* search(date) {
 	let initialSearch = yield util.nytSearch(date, 0)
