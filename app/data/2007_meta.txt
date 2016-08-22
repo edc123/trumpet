@@ -1,1 +1,1 @@
-{"year":"2007","hits":8,"offset":0}
+{"year":"2007","hits":6,"offset":0}

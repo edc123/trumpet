@@ -1,1 +1,1 @@
-{"year":"2015","hits":1,"offset":0}0}
+{"year":"2015","hits":1,"offset":0}

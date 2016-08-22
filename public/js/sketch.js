@@ -7,17 +7,15 @@
 // https://developer.nytimes.com/
 
 var data;
-var yearShowing = '2015';
+var yearShowing = '2014';
 
 function preload() {
 	data = loadJSON('/api/' + yearShowing);
 }
 
 function setup() {
-	meta = loadJSON('/api/meta' + yearShowing);
 	createCanvas(windowWidth, windowHeight);
 	noLoop();
-	console.log(meta[0].hits);
 }
 
 function draw() {
