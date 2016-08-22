@@ -5,6 +5,7 @@ const fs        = require('fs')
 const moment    = require('moment')
 const NYT       = require('nyt')
 const nyt       = new NYT(config.articleSearchKey)
+const sentiment = require('sentiment')
 
 function nytSearch(date, pageNumber) {
 	return new Promise((resolve, reject) => {
@@ -45,8 +46,7 @@ function readMeta(data, year) {
 			hits: rawJSON.hits,
 			offset: rawJSON.offset
 		}
-		let metaArr = [meta]
-		resolve(metaArr)
+		resolve(meta)
 	})
 }
 
@@ -62,11 +62,23 @@ function processHeadlines(data) {
 	})
 }
 
-//ARBITRARY TRUMPLINE UPDATE
+// This should take the entire headlines array and for each element add the score key with sentiment score
+function sentimenter(data) {
+	return new Promise((resolve, reject) => {
+		let sentimentHeadlines = data.map(headline => ({
+			headline: headline.headline,
+			pub_date: headline.pub_date,
+			web_url: headline.web_url,
+			score: sentiment(headline.headline).score
+		}))
+		resolve(sentimentHeadlines)
+	})
+}
 
 module.exports = {
 	nytSearch,
 	writeToTxt,
 	readMeta,
-	processHeadlines
+	processHeadlines,
+	sentimenter
 }
