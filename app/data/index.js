@@ -4,7 +4,7 @@ const co        = require('co')
 const moment    = require('moment')
 const util      = require('../util')
 
-let initialDate = '19760101'
+let initialDate = '20150101'
 let year        = moment(initialDate).format('YYYY')
 let headlines   = []
 let metaResult = []
@@ -21,7 +21,6 @@ co(function* () {
 	let sentimentedHeadlines = yield util.sentimenter(headlines)
 	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
 	let metaProcessed = yield util.processMeta(metaResult)
-	console.log(metaProcessed)
 	yield util.writeToTxt(metaProcessed, year+'_meta')
 	console.log('Done writing all the Trump for ' + year + '!')
 }).catch((err) => console.error('Error!', err.stack))
@@ -30,7 +29,7 @@ function* search(date) {
 	let initialSearch = yield util.nytSearch(date, 0)
 	let meta = yield util.readMeta(initialSearch, year)
 	Array.prototype.push.apply(metaResult, meta)
-	let pagesRemaining = Math.floor((meta.hits - meta.offset)/10)
+	let pagesRemaining = Math.floor((meta[0].hits - meta[0].offset)/10)
 	let initialResult = yield util.processHeadlines(initialSearch)
 	Array.prototype.push.apply(headlines, initialResult)
 	for(let i = 1; i <= pagesRemaining; i++) {
