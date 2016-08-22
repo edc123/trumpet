@@ -12,4 +12,9 @@ router.get('/api/:year', (req, res) => {
 	res.json(reqJSON)
 })
 
+router.get('/api/:year/meta', (req, res) => {
+	let reqJSON = JSON.parse(fs.readFileSync('./app/data/' + req.params.year + '_meta.txt', 'utf8'))
+	res.json(reqJSON)
+})
+
 module.exports = router
