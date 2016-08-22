@@ -7,7 +7,7 @@
 // https://developer.nytimes.com/
 
 var data;
-var yearShowing = 'total';
+var yearShowing = '2015';
 
 function preload() {
 	data = loadJSON('/api/' + yearShowing);
@@ -20,8 +20,8 @@ function setup() {
 
 function draw() {
 	textSize(18);
-	text(data.headline.pub_date, 35, 120);
+	text(data[0].pub_date, 35, 120);
 	textStyle(BOLD);
 	textSize(25);
-	text(data.headline.main, 35, 150);
+	text(data[0].headline, 35, 150);
  }
