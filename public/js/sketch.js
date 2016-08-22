@@ -19,9 +19,11 @@ function setup() {
 }
 
 function draw() {
-	textSize(18);
-	text(data[0].pub_date, 35, 120);
-	textStyle(BOLD);
-	textSize(25);
-	text(data[0].headline, 35, 150);
+	for (var i = 0; i <= data.length; i++){
+		textSize(18);
+		text(data[i].pub_date, 35, 120*i);
+		textStyle(BOLD);
+		textSize(25);
+		text(data[i].headline, 35, 150*i);
+	}
  }
