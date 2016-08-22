@@ -4,7 +4,7 @@ const co        = require('co')
 const moment    = require('moment')
 const util      = require('../util')
 
-let initialDate = '20150101'
+let initialDate = '19760101'
 let year        = moment(initialDate).format('YYYY')
 let headlines   = []
 let metaResult = []
