@@ -14,8 +14,10 @@ function preload() {
 }
 
 function setup() {
+	meta = loadJSON('/api/meta' + yearShowing);
 	createCanvas(windowWidth, windowHeight);
 	noLoop();
+	console.log(meta[0].hits);
 }
 
 function draw() {
