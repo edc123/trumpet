@@ -1,10 +1,15 @@
 'use strict'
 
 const fs = require('fs')
+const ms = require('mediaserver')
 const router = require('express').Router()
 
 router.get('/', (req, res) => {
 	res.render('index')
+})
+
+router.get('/trump.mp3', (req, res) => {
+	ms.pipe(req, res, './public/trump.mp3')
 })
 
 router.get('/api/:year', (req, res) => {

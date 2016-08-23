@@ -17,14 +17,11 @@ var yearShowing = '1998';
 function preload() {
 	data = loadJSON('/api/' + yearShowing);
 	meta = loadJSON('/api/meta/' + yearShowing);
-	var trumpSound = loadSound('http://trumplines.prox.fyi/trump.mp3');
 }
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	noLoop();
-	trumpSound.setVolume(0.1);
- 	trumpSound.play();
 }
 
 function yearView() {
@@ -36,7 +33,6 @@ function headlineView() {
 }
 
 function draw() {
-
 	textStyle(BOLD);
 	textSize(50);
 	text(meta.year, windowWidth/5, 255);
