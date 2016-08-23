@@ -41,6 +41,16 @@ sentiment analysis returns...
 need array of these...
 
 
+metaCompiled needs to return
+{
+    '1976': '1',
+    '1977': '0',
+    ...
+    '2016': '1669'
+}
+
+
+
 
 Promise.all([
     asyncFunc1(),

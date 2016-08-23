@@ -17,6 +17,11 @@ router.get('/api/:year', (req, res) => {
 	res.json(reqJSON)
 })
 
+router.get('/api/meta/all', (req, res) => {
+	let reqJSON = JSON.parse(fs.readFileSync('./app/data/allMeta.txt', 'utf8'))
+	res.json(reqJSON)
+})
+
 router.get('/api/meta/:year', (req, res) => {
 	let reqJSON = JSON.parse(fs.readFileSync('./app/data/' + req.params.year + '_meta.txt', 'utf8'))
 	res.json(reqJSON)
