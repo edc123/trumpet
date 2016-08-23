@@ -7,16 +7,17 @@
 // https://developer.nytimes.com/
 
 var data;
-var yearShowing = '1998';
-
-// var years = []
-// for (let i = 0; i <= 40; i++) {
-// 	years[i] = yearShowing;
-// }
+var data2015;
+var data2016;
+var meta;
+var currentState = 'year';
+var currentYear = '1999';
 
 function preload() {
-	data = loadJSON('/api/' + yearShowing);
-	meta = loadJSON('/api/meta/' + yearShowing);
+	meta = loadJSON('/api/meta/' + currentYear);
+	data2015 = loadJSON('/api/2015');
+	data2016 = loadJSON('/api/2016');
+	console.log('done with data');
 }
 
 function setup() {
@@ -25,18 +26,23 @@ function setup() {
 }
 
 function yearView() {
+	// Year navigation buttons
+	var rewindYear = createA('#', '&larr;');
+	rewindYear.position(windowWidth/5 - 85, 210);
+	rewindYear.id('yearControl');
+	rewindYear.mousePressed(goBackAYear);
 
-}
+	var forwardYear = createA('#', '&rarr;');
+	forwardYear.position(windowWidth/5 + 155, 210);
+	forwardYear.id('yearControl');
+	forwardYear.mousePressed(advanceAYear); 
 
-function headlineView() {
-// how to responsive w p5?
-}
+	// Year headline
+	var yearHeader = createP(currentYear);
+	yearHeader.position(windowWidth/5, 195);
+	yearHeader.id('yearHeader');
 
-function draw() {
-	textStyle(BOLD);
-	textSize(50);
-	text(meta.year, windowWidth/5, 255);
-
+	// Print all headlines
 	for (var i = 0; i <= data.length; i++){
 		fill(0);
 		var date = createP(data[i].pub_date);
@@ -55,6 +61,48 @@ function draw() {
 		else if (data[i].score < 0) headline.style('color', negative);
 		else headline.style('color', neutral);
 	}
+}
 
-	// can i use a generator here? pause and write new column...
+// Utils for year()
+function goBackAYear() {
+	if(currentYear > 1976) {
+		currentYear--;
+		console.log(currentYear)
+		redraw();
+	} else return false;
+}
+
+function advanceAYear() {
+	if(currentYear < 2016) {
+		currentYear++;
+		console.log(currentYear)
+		redraw();
+	} else return false;
+}
+
+function allYearsView() {
+	background(255);
+}
+
+function draw() {
+	removeElements();
+	if (currentState === 'year') {
+		yearLoader();
+	} else {
+		allYearsView();
+	}
+}
+
+function yearLoader() {
+	if (currentYear === 2016) {
+		data = data2016;
+		yearView();
+	} else if (currentYear === 2015) {
+		data = data2015;
+		yearView();
+	} else {
+		var dataPath = '/api/' + currentYear;
+		data = loadJSON(dataPath, yearView);
+		yearView();
+	}
 }
