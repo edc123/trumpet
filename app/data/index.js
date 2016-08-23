@@ -4,26 +4,26 @@ const co        = require('co')
 const moment    = require('moment')
 const util      = require('../util')
 
-let initialDate = '19760101'
+let initialDate = '19980101'
 let year        = moment(initialDate).format('YYYY')
 let headlines   = []
 let metaResult = []
 
-// co(function* () {
-// 	// Article Search for Whole Year
-// 	// console.log('Working on ' + year + '...')
-// 	let dates = [initialDate]
-// 	for(let i = 1; i <= 2; i++)
-// 		dates.push(moment(initialDate).add(4*i, 'months').format('YYYYMMDD'))
-// 	let searches = dates.map(date => { return co(search(date)) })
-// 	yield Promise.all(searches)
-// 	// Sentiment Analysis for Year's headlines
-// 	let sentimentedHeadlines = yield util.sentimenter(headlines)
-// 	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
-// 	let metaProcessed = yield util.processMeta(metaResult)
-// 	yield util.writeToTxt(metaProcessed, year+'_meta')
-// 	// console.log('Done writing all the Trump for ' + year + '!')
-// }).catch((err) => console.error('Error!', err.stack))
+co(function* () {
+	// Article Search for Whole Year
+	// console.log('Working on ' + year + '...')
+	let dates = [initialDate]
+	for(let i = 1; i <= 2; i++)
+		dates.push(moment(initialDate).add(4*i, 'months').format('YYYYMMDD'))
+	let searches = dates.map(date => { return co(search(date)) })
+	yield Promise.all(searches)
+	// Sentiment Analysis for Year's headlines
+	let sentimentedHeadlines = yield util.sentimenter(headlines)
+	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
+	let metaProcessed = yield util.processMeta(metaResult)
+	yield util.writeToTxt(metaProcessed, year+'_meta')
+	// console.log('Done writing all the Trump for ' + year + '!')
+}).catch((err) => console.error('Error!', err.stack))
 
 function* search(date) {
 	let initialSearch = yield util.nytSearch(date, 0)

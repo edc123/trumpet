@@ -65,7 +65,7 @@ function processHeadlines(data) {
 		let headlinesJSON = JSON.parse(data).response.docs
 		let processed = headlinesJSON.map(doc => ({
 			headline: doc.headline.main,
-			pub_date: moment(doc.pub_date).format('YYYYMMDD'),
+			pub_date: moment(doc.pub_date).format('MMM Do'),
 			web_url: doc.web_url
 		}))
 		resolve(processed)
