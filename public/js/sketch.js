@@ -36,16 +36,16 @@ function draw() {
 
 	textStyle(BOLD);
 	textSize(50);
-	text(meta.year, windowWidth/5, 175);
+	text(meta.year, windowWidth/5, 255);
 
 	for (var i = 0; i <= data.length; i++){
 		fill(0);
 		var date = createP(data[i].pub_date);
-		date.position(windowWidth/5, 230 + (i*100));
+		date.position(windowWidth/5, 310 + (i*100));
 		date.id("date");
 
 		var headline = createA(data[i].web_url, data[i].headline);
-		headline.position(windowWidth/5, 255 + (i*100));
+		headline.position(windowWidth/5, 335 + (i*100));
 		headline.id('webUrl');
 
 		// Colours
