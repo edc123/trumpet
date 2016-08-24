@@ -11,7 +11,6 @@ var data;
 var data2015;
 var data2016;
 var meta;
-var trumplessYears = ['1977', '1978', '1979', '1980', '1981', '1982'];
 
 // Init states
 var currentState = 'year';
@@ -64,9 +63,12 @@ function yearView() {
 	var yearHeader = createP(currentYear);
 	yearHeader.position(36, 305);
 	yearHeader.id('yearHeader');
-
+	
+	spinner('show');
+	
 	// Print all headlines
 	for (var i = 0; i <= data.length; i++){
+		console.log(i)
 		fill(51);
 		var date = createP(data[i].pub_date);
 		date.position(36, 430 + (i*170));
@@ -83,10 +85,16 @@ function yearView() {
 		if (data[i].score > 0) headline.style('color', positive);
 		else if (data[i].score < 0) headline.style('color', negative);
 		else headline.style('color', neutral);
+		spinner('hide');
 	}
 }
 
 // Utils for year()
+function spinner(option) {
+	if (option === 'show') document.getElementById("spinner").style.display = "block";
+	else if (option === 'hide') document.getElementById("spinner").style.display = "none";
+}
+
 function drawBar (label, height, positionX) {
 	var rect = createDiv('');
 	rect.position(positionX, 210);
