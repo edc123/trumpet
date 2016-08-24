@@ -25,10 +25,10 @@ function setup() {
 }
 
 function yearView() {
-	// Display introductory hot tip!
-	var hotTip = createP("Select a year from the timeline above, or use arrows below to view all headlines concerning Donald Trump.");
-	hotTip.position(36, 200);
-	hotTip.id('hitsLabel');
+	// // Display introductory hot tip!
+	// var hotTip = createP("Select a year from the timeline above, or use arrows below to view all headlines concerning Donald Trump.");
+	// hotTip.position(36, 200);
+	// hotTip.id('hitsLabel');
 
 	// The year-by-year total articles graph navigation thing
 	for (var i in meta) {
@@ -38,29 +38,29 @@ function yearView() {
 
 	// Year navigation buttons
 	var rewindYear = createA('#', '&larr;');
-	rewindYear.position(36 + 150, 300);
+	rewindYear.position(36 + 160, 350);
 	rewindYear.id('yearControl');
 	rewindYear.mousePressed(goBackAYear);
 
 	var forwardYear = createA('#', '&rarr;');
-	forwardYear.position(36 + 180, 300);
+	forwardYear.position(36 + 190, 350);
 	forwardYear.id('yearControl');
 	forwardYear.mousePressed(advanceAYear); 
 
 	// Year headline
 	var yearHeader = createP(currentYear);
-	yearHeader.position(36, 275);
+	yearHeader.position(36, 305);
 	yearHeader.id('yearHeader');
 	
 	// Print all headlines
 	for (var i = 0; i <= data.length; i++){
 		fill(0);
 		var date = createP(data[i].pub_date);
-		date.position(36, 390 + (i*100));
+		date.position(36, 430 + (i*170));
 		date.id("date");
 
 		var headline = createA(data[i].web_url, data[i].headline);
-		headline.position(36, 415 + (i*100));
+		headline.position(36, 455 + (i*170));
 		headline.id('webUrl');
 
 		// Colours
@@ -76,21 +76,21 @@ function yearView() {
 // Utils for year()
 function drawBar (label, height, positionX) {
 	var rect = createDiv('');
-	rect.position(positionX, 170);
+	rect.position(positionX, 210);
 	rect.style('background', '#000');
-	rect.style('width', '10px');
+	rect.style('width', '15px');
 	rect.style('height', height + 'px');
 	rect.style('transform', 'translate(0px, -100%)');
 	var yearLabel = createDiv(label);
-	yearLabel.position(positionX-3, 180);
+	yearLabel.position(positionX-3, 220);
 	yearLabel.id('yearLabel');
 	yearLabel.hide();
 	var hitsLabel = createDiv(height + ' articles');
-	hitsLabel.position(positionX-3, 210);
+	hitsLabel.position(positionX-3, 250);
 	hitsLabel.id('hitsLabel');
 	hitsLabel.hide();
 	var hoverArea = createDiv('');
-	hoverArea.position(positionX-10, 200);
+	hoverArea.position(positionX-10, 235);
 	hoverArea.style('width', '50px');
 	hoverArea.style('height', ( height + 100) + 'px');
 	hoverArea.style('transform', 'translate(0px, -100%)');
