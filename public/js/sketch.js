@@ -44,7 +44,6 @@ function yearView() {
 	}
 
 	// Year navigation buttons
-
 	var rewindYear = createA('#', '&#9664;');
 	rewindYear.position(36 + 175, 335);
 	rewindYear.id('yearControl');
@@ -68,7 +67,6 @@ function yearView() {
 	
 	// Print all headlines
 	for (var i = 0; i <= data.length; i++){
-		console.log(i)
 		fill(51);
 		var date = createP(data[i].pub_date);
 		date.position(36, 430 + (i*170));
@@ -100,9 +98,8 @@ function drawBar (label, height, positionX) {
 	rect.position(positionX, 210);
 	rect.style('background', '#333');
 	rect.style('width', '30px');
-	if (height === 0) {
-		rect.style('height', height + 'px');
-	} else rect.style('height', (height + 5) + 'px');
+	if (height === 0) rect.style('height', height + 'px');
+	else rect.style('height', (height + 5) + 'px');
 	rect.style('transform', 'translate(0px, -100%)');
 	var yearLabel = createDiv(label);
 	yearLabel.position(positionX-3, 220);
@@ -120,9 +117,10 @@ function drawBar (label, height, positionX) {
 	// hoverArea.style('border', '1px solid #FF0000');
 	hoverArea.mouseOver(function() {
 		hoverArea.style('cursor', 'zoom-in');
-		if((height > 0) && (label != currentYear)) {
+		if ((height > 0) && (label != currentYear)) {
 			rect.style('height', (height + 10) + 'px');
-			rect.style('transform', 'translate(0px, -100%) scale(1.2, 1)');
+			rect.style('background', '#777');
+			rect.style('transform', 'translate(0px, -100%) scale(1, 1)');
 		}
 		yearLabel.show();
 		hitsLabel.show();
@@ -134,8 +132,11 @@ function drawBar (label, height, positionX) {
 		} else return false;
 	});
 	hoverArea.mouseOut(function() {
-		rect.style('transform', 'translate(0px, -100%)');
-		rect.style('height', height + 'px');
+		if ((height > 0) && (label != currentYear)) {
+			rect.style('transform', 'translate(0px, -100%)');
+			rect.style('height', (height + 5) + 'px');
+			rect.style('background', '#333');
+		}
 		yearLabel.hide();
 		hitsLabel.hide();
 	});
@@ -173,11 +174,8 @@ function allYearsView() {
 
 function draw() {
 	removeElements();
-	if (currentState === 'year') {
-		yearLoader();
-	} else {
-		allYearsView();
-	}
+	if (currentState === 'year') yearLoader();
+	else allYearsView();
 }
 
 function yearLoader() {
