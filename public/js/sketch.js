@@ -28,35 +28,32 @@ function setup() {
 }
 
 function yearView() {
-	// // Display introductory hot tip!
-	// var hotTip = createP("Select a year from the timeline above, or use arrows below to view all headlines concerning Donald Trump.");
-	// hotTip.position(36, 200);
-	// hotTip.id('hitsLabel');
-
-	var positionX = 36 + ((windowWidth - 112)/40)*(currentYear - 1976);
+	var positionX = 36 + ((windowWidth - 95)/40)*(currentYear - 1976);
 	drawIndicator(positionX, 210);
 
 	// The year-by-year total articles graph navigation thing
 	for (var i in meta) {
-		var positionX = 36 + ((windowWidth - 112)/40)*i;
+		var positionX = 36 + ((windowWidth - 95)/40)*i;
 		drawBar(meta[i].year, meta[i].hits, positionX);
 		if (meta[i].year === currentYear) drawIndicator(positionX, meta[i].hits);
 	}
 
-	// Year navigation buttons
-	// var rewindYear = createA('#', '&#9664;');
-	// rewindYear.position(36 + 175, 335);
-	// rewindYear.id('yearControl');
-	// rewindYear.attribute('title', 'Go back a year');
-	// rewindYear.attribute('alt', 'Go back a year');
-	// rewindYear.mousePressed(goBackAYear);
+	if(windowWidth < 1536) {
+		// Year navigation buttons
+		var rewindYear = createA('#', '&#9664;');
+		rewindYear.position(36 + 175, 335);
+		rewindYear.id('yearControl');
+		rewindYear.attribute('title', 'Go back a year');
+		rewindYear.attribute('alt', 'Go back a year');
+		rewindYear.mousePressed(goBackAYear);
 
-	// var forwardYear = createA('#', '&#9654;');
-	// forwardYear.position(36 + 210, 335);
-	// forwardYear.id('yearControl');
-	// forwardYear.attribute('title', 'Go forward a year');
-	// forwardYear.attribute('alt', 'Go forward a year');
-	// forwardYear.mousePressed(advanceAYear); 
+		var forwardYear = createA('#', '&#9654;');
+		forwardYear.position(36 + 210, 335);
+		forwardYear.id('yearControl');
+		forwardYear.attribute('title', 'Go forward a year');
+		forwardYear.attribute('alt', 'Go forward a year');
+		forwardYear.mousePressed(advanceAYear); 
+	}
 
 	// Year headline
 	var yearHeader = createP(currentYear);
@@ -69,11 +66,11 @@ function yearView() {
 	for (var i = 0; i <= data.length; i++){
 		fill(51);
 		var date = createP(data[i].pub_date);
-		date.position(36, 430 + (i*170));
+		date.position(36, 430 + (i*windowHeight/6));
 		date.id("date");
 
 		var headline = createA(data[i].web_url, data[i].headline);
-		headline.position(36, 470 + (i*170));
+		headline.position(36, 470 + (i*windowHeight/6)); //was 170
 		headline.id('webUrl');
 		
 		// Colours
@@ -97,22 +94,22 @@ function drawBar (label, height, positionX) {
 	var rect = createDiv('');
 	rect.position(positionX, 210);
 	rect.style('background', '#333');
-	rect.style('width', '30px');
+	rect.style('width', '1.5%');
 	if (height === 0) rect.style('height', height + 'px');
 	else rect.style('height', (height + 5) + 'px');
 	rect.style('transform', 'translate(0px, -100%)');
 	var yearLabel = createDiv(label);
-	yearLabel.position(positionX-3, 220);
+	yearLabel.position(positionX - 3, 220);
 	yearLabel.id('yearLabel');
 	yearLabel.hide();
 	var hitsLabel = createDiv(height + ' articles');
-	hitsLabel.position(positionX-3, 250);
+	hitsLabel.position(positionX - 3, 250);
 	hitsLabel.id('hitsLabel');
 	hitsLabel.hide();
 	var hoverArea = createDiv('');
-	hoverArea.position(positionX-10, 235);
-	hoverArea.style('width', '50px');
-	hoverArea.style('height', ( height + 100) + 'px');
+	hoverArea.position(positionX - 10, 235);
+	hoverArea.style('width', '1.5%');
+	hoverArea.style('height', (height + 100) + 'px');
 	hoverArea.style('transform', 'translate(0px, -100%)');
 	// hoverArea.style('border', '1px solid #FF0000');
 	hoverArea.mouseOver(function() {
@@ -146,36 +143,37 @@ function drawIndicator(positionX, height) {
 	var indicator = createDiv('');
 	indicator.position(positionX, 210);
 	indicator.style('background', '#FF1744');
-	indicator.style('width', '30px');
+	indicator.style('width', '1.5%'); //was 30px
 	indicator.style('height', (height + 5) + 'px');
-	var area51 = 36 + ((windowWidth - 112)/40)*(2015 - 1976);
+	var area51 = 36 + ((windowWidth - 95)/40)*(2015 - 1976);
 	if (positionX >= area51) indicator.style('z-index', 999);
 	else if (positionX < area51) indicator.style('z-index', -1);
 	indicator.style('transform', 'translate(0px, -100%)');
+	indicator.id('indicator')
 }
 
-// function goBackAYear() {
-// 	if (currentYear > 1976) {
-// 		currentYear--;
-// 		redraw();
-// 	}
-// }
+function goBackAYear() {
+	if (currentYear > 1976) {
+		currentYear--;
+		redraw();
+	}
+}
 
-// function advanceAYear() {
-// 	if (currentYear < 2016) {
-// 		currentYear++;
-// 		redraw();
-// 	}
-// }
+function advanceAYear() {
+	if (currentYear < 2016) {
+		currentYear++;
+		redraw();
+	}
+}
 
-function allYearsView() {
+function gridView() {
 	background(255);
 }
 
 function draw() {
 	removeElements();
 	if (currentState === 'year') yearLoader();
-	else allYearsView();
+	else gridView();
 }
 
 function yearLoader() {
