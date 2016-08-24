@@ -1,1 +1,1 @@
-[[[{"headline":"There were no Trumplines!","pub_date":"During This year...","web_url":"#","score":0}]]]
+[[{"headline":"There were no Trumplines!","pub_date":"During This year...","web_url":"#","score":0}]]

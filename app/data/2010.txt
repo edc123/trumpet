@@ -1,1 +1,82 @@
-[[{"headline":"Trump Moves Against Icahn's Casino Plan","pub_date":"Feb 4th","web_url":"http://dealbook.nytimes.com/2010/02/04/trump-moves-against-icahns-casino-plan/","score":1},{"headline":"Trump Wants the W.T.C. Site (Sort Of)","pub_date":"Feb 12th","web_url":"http://dealbook.nytimes.com/2010/02/12/trump-wants-the-wtc-sort-of/","score":0},{"headline":"Park Bearing Name of Trump Gets Fired. He Isn't Pleased.","pub_date":"Mar 4th","web_url":"http://query.nytimes.com/gst/fullpage.html?res=9B0DE2DE173CF937A35750C0A9669D8B63","score":6},{"headline":"Icahn Now Owns Entire Mortgage on Trump Casinos","pub_date":"Apr 2nd","web_url":"http://dealbook.nytimes.com/2010/04/02/icahn-now-owns-entire-mortgage-on-trump-casinos/","score":0},{"headline":"Icahn Buys Remainder of Trump Resorts Mortgage","pub_date":"Apr 3rd","web_url":"http://www.nytimes.com/2010/04/03/business/03bizbriefs-ICAHNBUYSREM_BRF.html","score":0},{"headline":"Donald J. Trump Jr.","pub_date":"Apr 4th","web_url":"http://www.nytimes.com/2010/04/04/realestate/04Sqft.html","score":0},{"headline":"Brooklyn Towers Have Trump Name but No Limos","pub_date":"Apr 9th","web_url":"http://www.nytimes.com/2010/04/09/nyregion/09trump.html","score":-1},{"headline":"Trump and Bondholders Gain Control of Casinos","pub_date":"Apr 13th","web_url":"http://www.nytimes.com/2010/04/13/business/13trump.html","score":2},{"headline":"Another Trump Hopes What Glitters Will Be Gold","pub_date":"Apr 16th","web_url":"http://www.nytimes.com/2010/04/16/business/media/16adco.html","score":2},{"headline":"Clare Sabatini Dies at 77; Beat Trump in Land Fight","pub_date":"May 1st","web_url":"http://www.nytimes.com/2010/05/01/nyregion/01sabatini.html","score":-1},{"headline":"Clare Sabatini Dies at 77; Beat Trump in Land Fight","pub_date":"May 1st","web_url":"http://www.nytimes.com/2010/05/01/nyregion/01sabatini.html","score":-1},{"headline":"Fifteen Buyers File Lawsuit Against Trump SoHo Project","pub_date":"Aug 3rd","web_url":"http://www.nytimes.com/2010/08/03/nyregion/03trump.html","score":-2},{"headline":"Donald Trump Sued for Fraud Over SoHo Condo","pub_date":"Aug 4th","web_url":"http://dealbook.nytimes.com/2010/08/04/donald-trump-sued-for-fraud-over-soho-condo/","score":-4},{"headline":"Donald Trump on His New Line of Crystal","pub_date":"Oct 21st","web_url":"http://www.nytimes.com/2010/10/21/garden/21qna.html","score":2}]]
+[
+    [
+        {
+            "headline": "Trump Moves Against Icahn's Casino Plan",
+            "pub_date": "Feb 4th",
+            "web_url": "http://dealbook.nytimes.com/2010/02/04/trump-moves-against-icahns-casino-plan/",
+            "score": 1
+        },
+        {
+            "headline": "Trump Wants the W.T.C. Site (Sort Of)",
+            "pub_date": "Feb 12th",
+            "web_url": "http://dealbook.nytimes.com/2010/02/12/trump-wants-the-wtc-sort-of/",
+            "score": 0
+        },
+        {
+            "headline": "Park Bearing Name of Trump Gets Fired. He Isn't Pleased.",
+            "pub_date": "Mar 4th",
+            "web_url": "http://query.nytimes.com/gst/fullpage.html?res=9B0DE2DE173CF937A35750C0A9669D8B63",
+            "score": 6
+        },
+        {
+            "headline": "Icahn Now Owns Entire Mortgage on Trump Casinos",
+            "pub_date": "Apr 2nd",
+            "web_url": "http://dealbook.nytimes.com/2010/04/02/icahn-now-owns-entire-mortgage-on-trump-casinos/",
+            "score": 0
+        },
+        {
+            "headline": "Icahn Buys Remainder of Trump Resorts Mortgage",
+            "pub_date": "Apr 3rd",
+            "web_url": "http://www.nytimes.com/2010/04/03/business/03bizbriefs-ICAHNBUYSREM_BRF.html",
+            "score": 0
+        },
+        {
+            "headline": "Donald J. Trump Jr.",
+            "pub_date": "Apr 4th",
+            "web_url": "http://www.nytimes.com/2010/04/04/realestate/04Sqft.html",
+            "score": 0
+        },
+        {
+            "headline": "Brooklyn Towers Have Trump Name but No Limos",
+            "pub_date": "Apr 9th",
+            "web_url": "http://www.nytimes.com/2010/04/09/nyregion/09trump.html",
+            "score": -1
+        },
+        {
+            "headline": "Trump and Bondholders Gain Control of Casinos",
+            "pub_date": "Apr 13th",
+            "web_url": "http://www.nytimes.com/2010/04/13/business/13trump.html",
+            "score": 2
+        },
+        {
+            "headline": "Another Trump Hopes What Glitters Will Be Gold",
+            "pub_date": "Apr 16th",
+            "web_url": "http://www.nytimes.com/2010/04/16/business/media/16adco.html",
+            "score": 2
+        },
+        {
+            "headline": "Clare Sabatini Dies at 77; Beat Trump in Land Fight",
+            "pub_date": "May 1st",
+            "web_url": "http://www.nytimes.com/2010/05/01/nyregion/01sabatini.html",
+            "score": -1
+        },
+        {
+            "headline": "Fifteen Buyers File Lawsuit Against Trump SoHo Project",
+            "pub_date": "Aug 3rd",
+            "web_url": "http://www.nytimes.com/2010/08/03/nyregion/03trump.html",
+            "score": -2
+        },
+        {
+            "headline": "Donald Trump Sued for Fraud Over SoHo Condo",
+            "pub_date": "Aug 4th",
+            "web_url": "http://dealbook.nytimes.com/2010/08/04/donald-trump-sued-for-fraud-over-soho-condo/",
+            "score": -4
+        },
+        {
+            "headline": "Donald Trump on His New Line of Crystal",
+            "pub_date": "Oct 21st",
+            "web_url": "http://www.nytimes.com/2010/10/21/garden/21qna.html",
+            "score": 2
+        }
+    ]
+]

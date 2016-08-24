@@ -108,7 +108,7 @@ function drawBar (label, height, positionX) {
 	hitsLabel.hide();
 	var hoverArea = createDiv('');
 	hoverArea.position(positionX - 10, 235);
-	hoverArea.style('width', '1.5%');
+	hoverArea.style('width', '2.5%');
 	hoverArea.style('height', (height + 100) + 'px');
 	hoverArea.style('transform', 'translate(0px, -100%)');
 	// hoverArea.style('border', '1px solid #FF0000');

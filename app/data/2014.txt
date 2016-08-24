@@ -1,1 +1,40 @@
-[[{"headline":"Trump Stops Short of Entering the Race for Governor","pub_date":"Feb 13th","web_url":"http://www.nytimes.com/2014/02/13/nyregion/trump-stops-short-of-entering-the-race-for-governor.html","score":-1},{"headline":"Trump Purchasing Turnberry","pub_date":"May 1st","web_url":"http://www.nytimes.com/2014/05/01/sports/golf/trump-purchasing-turnberry.html","score":0},{"headline":"Trump Purchasing Turnberry","pub_date":"May 1st","web_url":"http://www.nytimes.com/2014/05/01/sports/golf/trump-purchasing-turnberry.html","score":0},{"headline":"Trump Courses to Host Two Events","pub_date":"May 2nd","web_url":"http://www.nytimes.com/2014/05/02/sports/golf/trump-courses-to-host-two-events.html","score":0},{"headline":"Chicago Winces After a Jewel Is Stamped ‘Trump’","pub_date":"Jun 13th","web_url":"http://www.nytimes.com/2014/06/13/us/chicago-winces-after-a-jewel-is-stamped-trump.html","score":1},{"headline":"A Quick Lesson in Politics for Donald Trump","pub_date":"Sep 22nd","web_url":"http://www.nytimes.com/politics/first-draft/2014/09/22/a-quick-lesson-in-politics-for-donald-trump/","score":0},{"headline":"Our Complicated History With Donald Trump","pub_date":"Oct 4th","web_url":"http://6thfloor.blogs.nytimes.com/2014/10/03/our-complicated-history-with-donald-trump/","score":0}]]
+[
+    [
+        {
+            "headline": "Trump Stops Short of Entering the Race for Governor",
+            "pub_date": "Feb 13th",
+            "web_url": "http://www.nytimes.com/2014/02/13/nyregion/trump-stops-short-of-entering-the-race-for-governor.html",
+            "score": -1
+        },
+        {
+            "headline": "Trump Purchasing Turnberry",
+            "pub_date": "May 1st",
+            "web_url": "http://www.nytimes.com/2014/05/01/sports/golf/trump-purchasing-turnberry.html",
+            "score": 0
+        },
+        {
+            "headline": "Trump Courses to Host Two Events",
+            "pub_date": "May 2nd",
+            "web_url": "http://www.nytimes.com/2014/05/02/sports/golf/trump-courses-to-host-two-events.html",
+            "score": 0
+        },
+        {
+            "headline": "Chicago Winces After a Jewel Is Stamped ‘Trump’",
+            "pub_date": "Jun 13th",
+            "web_url": "http://www.nytimes.com/2014/06/13/us/chicago-winces-after-a-jewel-is-stamped-trump.html",
+            "score": 1
+        },
+        {
+            "headline": "A Quick Lesson in Politics for Donald Trump",
+            "pub_date": "Sep 22nd",
+            "web_url": "http://www.nytimes.com/politics/first-draft/2014/09/22/a-quick-lesson-in-politics-for-donald-trump/",
+            "score": 0
+        },
+        {
+            "headline": "Our Complicated History With Donald Trump",
+            "pub_date": "Oct 4th",
+            "web_url": "http://6thfloor.blogs.nytimes.com/2014/10/03/our-complicated-history-with-donald-trump/",
+            "score": 0
+        }
+    ]
+]
