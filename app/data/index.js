@@ -20,13 +20,12 @@ let metaResult = []
 // 	yield Promise.all(searches)
 // 	// Sentiment Analysis for Year's headlines
 // 	let sentimentedHeadlines = yield util.sentimenter(headlines)
-// 	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
+// 	yield util.writeToTxt(sentimentedHeadlines, year + '_sentiment')
 // 	let metaProcessed = yield util.processMeta(metaResult)
-// 	yield util.writeToTxt(metaProcessed, year+'_meta')
-// 	yield co(processResults())
+// 	yield util.writeToTxt(metaProcessed, year + '_meta')
+// 	// yield co(processResults())
 // 	console.log('Done writing all the Trump for ' + year + '!')
-// })
-// .catch(err => console.error('Error!', err.stack))
+// }).catch(err => console.error('Error!', err.stack))
 
 function* search(date) {
 	let initialSearch = yield util.nytSearch(date, 0)
@@ -43,6 +42,7 @@ function* search(date) {
 	}
 }
 
+// Need to set to 1976 before use
 function* processResults() {
 	let metaCompiled = []
 	for(let i = 0; i <= 40; i++) {

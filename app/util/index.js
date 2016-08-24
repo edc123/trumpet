@@ -7,6 +7,8 @@ const NYT       = require('nyt')
 const nyt       = new NYT(config.articleSearchKey)
 const sentiment = require('sentiment')
 
+const trumpWords = JSON.parse(fs.readFileSync('./app/data/trumpwords.txt', 'utf8'))
+
 function nytSearch(date, pageNumber) {
 	return new Promise((resolve, reject) => {
 		nyt.article.search({
@@ -79,7 +81,7 @@ function sentimenter(data) {
 			headline: headline.headline,
 			pub_date: headline.pub_date,
 			web_url: headline.web_url,
-			score: sentiment(headline.headline).score
+			score: sentiment(headline.headline, trumpWords).score 
 		}))
 		resolve(sentimentHeadlines)
 	})

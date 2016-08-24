@@ -1,0 +1,19 @@
+{
+	"promoter": 2,
+	"co-op": 1,
+	"proposes": 1,
+	"rejects": -2,
+	"tallest": 2,
+	"builder": 2,
+	"forays": 3,
+	"fine": -3,
+	"new": 2,
+	"discontent": -4,
+	"believers": 2,
+	"expanding": 1,
+	"casino": 1,
+	"anti-trump": -2,
+	"biggest": 3,
+	"fired": 3,
+	"apprentices": 2
+}

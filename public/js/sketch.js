@@ -44,23 +44,23 @@ function yearView() {
 	}
 
 	// Year navigation buttons
-	var rewindYear = createA('#', '&#9664;');
-	rewindYear.position(36 + 175, 335);
-	rewindYear.id('yearControl');
-	rewindYear.attribute('title', 'Go back a year');
-	rewindYear.attribute('alt', 'Go back a year');
-	rewindYear.mousePressed(goBackAYear);
+	// var rewindYear = createA('#', '&#9664;');
+	// rewindYear.position(36 + 175, 335);
+	// rewindYear.id('yearControl');
+	// rewindYear.attribute('title', 'Go back a year');
+	// rewindYear.attribute('alt', 'Go back a year');
+	// rewindYear.mousePressed(goBackAYear);
 
-	var forwardYear = createA('#', '&#9654;');
-	forwardYear.position(36 + 210, 335);
-	forwardYear.id('yearControl');
-	forwardYear.attribute('title', 'Go forward a year');
-	forwardYear.attribute('alt', 'Go forward a year');
-	forwardYear.mousePressed(advanceAYear); 
+	// var forwardYear = createA('#', '&#9654;');
+	// forwardYear.position(36 + 210, 335);
+	// forwardYear.id('yearControl');
+	// forwardYear.attribute('title', 'Go forward a year');
+	// forwardYear.attribute('alt', 'Go forward a year');
+	// forwardYear.mousePressed(advanceAYear); 
 
 	// Year headline
 	var yearHeader = createP(currentYear);
-	yearHeader.position(36, 305);
+	yearHeader.position(36, 290);
 	yearHeader.id('yearHeader');
 	
 	spinner('show');
@@ -154,19 +154,19 @@ function drawIndicator(positionX, height) {
 	indicator.style('transform', 'translate(0px, -100%)');
 }
 
-function goBackAYear() {
-	if (currentYear > 1976) {
-		currentYear--;
-		redraw();
-	}
-}
+// function goBackAYear() {
+// 	if (currentYear > 1976) {
+// 		currentYear--;
+// 		redraw();
+// 	}
+// }
 
-function advanceAYear() {
-	if (currentYear < 2016) {
-		currentYear++;
-		redraw();
-	}
-}
+// function advanceAYear() {
+// 	if (currentYear < 2016) {
+// 		currentYear++;
+// 		redraw();
+// 	}
+// }
 
 function allYearsView() {
 	background(255);
