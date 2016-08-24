@@ -67,7 +67,7 @@ function yearView() {
 		date.id("date");
 
 		var headline = createA(data[i].web_url, data[i].headline);
-		headline.position(36, 455 + (i*170));
+		headline.position(36, 470 + (i*170));
 		headline.id('webUrl');
 
 		// Colours

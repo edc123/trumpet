@@ -23,8 +23,10 @@ let metaResult = []
 // 	yield util.writeToTxt(sentimentedHeadlines, year+'_sentiment')
 // 	let metaProcessed = yield util.processMeta(metaResult)
 // 	yield util.writeToTxt(metaProcessed, year+'_meta')
+// 	yield co(processResults())
 // 	console.log('Done writing all the Trump for ' + year + '!')
-// }).catch((err) => console.error('Error!', err.stack))
+// })
+// .catch(err => console.error('Error!', err.stack))
 
 function* search(date) {
 	let initialSearch = yield util.nytSearch(date, 0)
@@ -44,11 +46,20 @@ function* search(date) {
 function* processResults() {
 	let metaCompiled = []
 	for(let i = 0; i <= 40; i++) {
+		let headlineCompiled = []
 		let currentYear = moment(initialDate).add(i, 'Y').format('YYYY')
 		let currentPath = './app/data/' + currentYear + '_meta.txt'
+		let yearPath = './app/data/' + currentYear + '_sentiment.txt'
 		console.log('Reading', currentPath)
 		let metaPart = JSON.parse(fs.readFileSync(currentPath, 'utf8'))
 		metaCompiled.push(metaPart)
+		let headlinePart = JSON.parse(fs.readFileSync(yearPath, 'utf8'))
+		let headlinePartSorted = headlinePart.sort((left, right) => {
+			return (moment(left.pub_date, 'MMM Do')).diff(moment(right.pub_date, 'MMM Do'))
+		})
+		headlineCompiled.push(headlinePartSorted)
+		yield util.writeToTxt(headlineCompiled, currentYear)
 	}
 	yield util.writeToTxt(metaCompiled, 'allMeta')
+	console.log('Done final processing!')
 }

@@ -13,7 +13,7 @@ router.get('/trump.mp3', (req, res) => {
 })
 
 router.get('/api/:year', (req, res) => {
-	let reqJSON = JSON.parse(fs.readFileSync('./app/data/' + req.params.year + '_sentiment.txt', 'utf8'))
+	let reqJSON = JSON.parse(fs.readFileSync('./app/data/' + req.params.year + '.txt', 'utf8'))[0]
 	res.json(reqJSON)
 })
 
