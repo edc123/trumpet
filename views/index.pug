@@ -5,9 +5,35 @@ block title
 
 block canvas
   script(type='text/javascript' src='js/sketch.js')
-  
+  .popup
+    h1#intro
+      |Trumplines
+    .container
+        .row
+          .intro.col-sm-9.col-md-7.col-lg-6
+            button(type="button" class="btn btn-lg")
+              |START TRUMPLINES
+            p
+            br
+            br
+            |This is Trumplines. A way to explore Donald Trump's public image, as pieced together here using headlines published by the New York Times, from 1976 to the present day.
+            p
+            |Like many public figures, Trump has had his ups and downs in the public eye &mdash; but what you will see as you browse the headlines is a very interesting person and persona: becoming increasingly outspoken year-by-year.
+            p
+            |If you have any sort of an itch to understand why Trump may very well win the 2016 US presidential election, this is recommended reading.
+            p
+            |To help, all headlines have been run through a sentiment analysis program. Green and red highlighting indicates that a headline carries positive or negative sentiment, respectively. Neutral headlines are simply black.
+            p
+            |Just make a selection in the timeline, and you will be able to explore that year's Trump-related headlines. Feel free to click a headline to view the original article on the New York Times website.
+            p
+            |For optimal viewing experience, please use a desktop or laptop to run Trumplines.
+            p
+            |Edward Cheng 2016
+
   #spinner
     |Loading...
+  
+  iframe(src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ftrumplines.herokuapp.com%2F&layout=button_count&size=large&mobile_iframe=true&appId=1567480740226971&width=84&height=28" width="84" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" class="fbButton")
 
 block footer
   .signature

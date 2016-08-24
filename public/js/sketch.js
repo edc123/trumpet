@@ -95,6 +95,7 @@ function drawBar (label, height, positionX) {
 	rect.position(positionX, 210);
 	rect.style('background', '#333');
 	rect.style('width', '1.5%');
+	rect.class('lines');
 	if (height === 0) rect.style('height', height + 'px');
 	else rect.style('height', (height + 5) + 'px');
 	rect.style('transform', 'translate(0px, -100%)');
