@@ -12,6 +12,9 @@ var data2015;
 var data2016;
 var meta;
 
+// Ta-da! ScrollMagic!
+var controller = new ScrollMagic.Controller();
+
 // Init states
 var currentState = 'year';
 var currentYear = '1976';
@@ -63,7 +66,7 @@ function yearView() {
 	spinner('show');
 	
 	// Print all headlines
-	for (var i = 0; i <= data.length; i++){
+	for (var i = 0; i <= Math.ceil(data.length/3); i++){
 		console.log(i)
 		fill(51);
 		var date = createP(data[i].pub_date);
