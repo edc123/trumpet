@@ -1,6 +1,6 @@
 {
   "name": "trumplines",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Sentiment analysis on Trump using New York Times API, with viz. ",
   "scripts": {
     "start": "node index.js",
