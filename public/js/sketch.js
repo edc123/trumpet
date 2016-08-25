@@ -64,6 +64,7 @@ function yearView() {
 	
 	// Print all headlines
 	for (var i = 0; i <= data.length; i++){
+		console.log(i)
 		fill(51);
 		var date = createP(data[i].pub_date);
 		date.position(36, 430 + (i*windowHeight/6));
@@ -72,6 +73,7 @@ function yearView() {
 		var headline = createA(data[i].web_url, data[i].headline);
 		headline.position(36, 470 + (i*windowHeight/6)); //was 170
 		headline.id('webUrl');
+		headline.attribute('target', '_blank');
 		
 		// Colours
 		var positive = color('#00E676');
