@@ -6,11 +6,17 @@ block title
 block canvas
   script(type='text/javascript' src='js/sketch.js')
   .popup
-    h1#intro
+    h1#intro.hidden-xs
       |Trumplines
+    img(src='img/trump.png' width='100%' class="visible-xs")
     .container
         .row
-          .intro.col-sm-9.col-md-7.col-lg-6
+          .mobile.visible-xs
+            |Trumplines just isn't the same thing on a small screen. Please view this on a computer.
+            br
+            br
+            |- Ed Cheng
+          .intro.col-sm-9.col-md-7.col-lg-6.hidden-xs
             button(type="button" class="btn btn-lg")
               |START TRUMPLINES
             p
