@@ -18,12 +18,10 @@ var currentYear = '1976';
 
 function preload() {
 	meta = loadJSON('/api/meta/all');
-	data2015 = loadJSON('/api/2015');
-	data2016 = loadJSON('/api/2016');
 }
 
 function setup() {
-	createCanvas(windowWidth, windowHeight-20);
+	createCanvas(windowWidth, windowHeight-10);
 	noLoop();
 }
 
