@@ -19,13 +19,13 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(windowWidth, windowHeight-10);
+	createCanvas(windowWidth, windowHeight - 10);
 	noLoop();
 }
 
 function yearView() {
 	var positionX = 36 + ((windowWidth - 65)/40)*(currentYear - 1976);
-	drawIndicator(positionX, 210);
+	drawIndicator(positionX, 300);
 
 	// The year-by-year total articles graph navigation thing
 	for (var i in meta) {
@@ -37,14 +37,14 @@ function yearView() {
 	if(windowWidth < 1536) {
 		// Year navigation buttons
 		var rewindYear = createA('#', '&#9664;');
-		rewindYear.position(36 + 175, 335);
+		rewindYear.position(36 + 215, 425);
 		rewindYear.id('yearControl');
 		rewindYear.attribute('title', 'Go back a year');
 		rewindYear.attribute('alt', 'Go back a year');
 		rewindYear.mousePressed(goBackAYear);
 
 		var forwardYear = createA('#', '&#9654;');
-		forwardYear.position(36 + 210, 335);
+		forwardYear.position(36 + 250, 425);
 		forwardYear.id('yearControl');
 		forwardYear.attribute('title', 'Go forward a year');
 		forwardYear.attribute('alt', 'Go forward a year');
@@ -53,7 +53,7 @@ function yearView() {
 
 	// Year headline
 	var yearHeader = createP(currentYear);
-	yearHeader.position(36, 290);
+	yearHeader.position(36, 380);
 	yearHeader.id('yearHeader');
 	
 	spinner('show');
@@ -63,11 +63,11 @@ function yearView() {
 		console.log(i)
 		fill(51);
 		var date = createP(data[i].pub_date);
-		date.position(36, 430 + (i*windowHeight/6));
+		date.position(36, 520 + (i * windowHeight/7));
 		date.id("date");
 
 		var headline = createA(data[i].web_url, data[i].headline);
-		headline.position(36, 470 + (i * windowHeight/6));
+		headline.position(36, 550 + (i * windowHeight/7));
 		headline.id('webUrl');
 		headline.attribute('target', '_blank');
 		
@@ -90,7 +90,7 @@ function spinner(option) {
 
 function drawBar (label, height, positionX) {
 	var rect = createDiv('');
-	rect.position(positionX, 210);
+	rect.position(positionX, 300);
 	rect.style('background', '#333');
 	rect.style('width', '1.5%');
 	rect.class('lines');
@@ -98,23 +98,23 @@ function drawBar (label, height, positionX) {
 	else rect.style('height', (height + 5) + 'px');
 	rect.style('transform', 'translate(0px, -100%)');
 	var yearLabel = createDiv(label);
-	yearLabel.position(positionX - 3, 220);
+	yearLabel.position(positionX - 3, 310);
 	yearLabel.id('yearLabel');
 	yearLabel.hide();
 	var hitsLabel = createDiv(height + ' articles');
-	hitsLabel.position(positionX - 3, 250);
+	hitsLabel.position(positionX - 3, 340);
 	hitsLabel.id('hitsLabel');
 	hitsLabel.hide();
 	var hoverArea = createDiv('');
-	hoverArea.position(positionX - 10, 235);
+	hoverArea.position(positionX - 10, 325);
 	hoverArea.style('width', '2.5%');
-	hoverArea.style('height', (height + 100) + 'px');
+	hoverArea.style('height', (height + 200) + 'px');
 	hoverArea.style('transform', 'translate(0px, -100%)');
 	hoverArea.mouseOver(function() {
 		hoverArea.style('cursor', 'zoom-in');
 		if ((height > 0) && (label != currentYear)) {
 			rect.style('height', (height + 10) + 'px');
-			rect.style('background', '#777');
+			rect.style('background', '#555');
 			rect.style('transform', 'translate(0px, -100%) scale(1, 1)');
 		}
 		yearLabel.show();
@@ -139,7 +139,7 @@ function drawBar (label, height, positionX) {
 
 function drawIndicator(positionX, height) {
 	var indicator = createDiv('');
-	indicator.position(positionX, 210);
+	indicator.position(positionX, 300);
 	indicator.style('background', '#FF1744');
 	indicator.style('width', '1.5%');
 	indicator.style('height', (height + 5) + 'px');

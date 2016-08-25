@@ -4,13 +4,13 @@
             "headline": "No Comment Necessary: Donald Trump, Border-Fence Builder",
             "pub_date": "Jan 26th",
             "web_url": "http://takingnote.blogs.nytimes.com/2015/01/26/no-comment-necessary-donald-trump-border-fence-builder/",
-            "score": 1
+            "score": -1
         },
         {
             "headline": "If You’re a Betting Man, It’s Time to Start Believing Donald Trump",
             "pub_date": "Jun 10th",
             "web_url": "http://www.nytimes.com/2015/06/10/upshot/if-youre-a-betting-man-its-time-to-start-believing-donald-trump.html",
-            "score": 0
+            "score": 1
         },
         {
             "headline": "First Draft Focus: From Up High, Donald Trump Says He&#8217;s In",
