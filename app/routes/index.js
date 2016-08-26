@@ -12,6 +12,10 @@ router.get('/trump.mp3', (req, res) => {
 	ms.pipe(req, res, './public/trump.mp3')
 })
 
+router.get('/trumpface.png', (req, res) => {
+	ms.pipe(req, res, './public/img/trumpfb.png')
+})
+
 router.get('/api/:year', (req, res) => {
 	let reqJSON = JSON.parse(fs.readFileSync('./app/data/' + req.params.year + '.txt', 'utf8'))[0]
 	res.json(reqJSON)
